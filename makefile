@@ -11,3 +11,6 @@ con.darwin: con.c
 con.linux: con.c
 	gcc -O3 -s -DKXVER=3 -I$(HOME)/q/c -o $@ $< $(HOME)/q/c/l64/c.o -lpthread
 
+con.linux32: con.c
+	gcc -m32 -O3 -s -DKXVER=3 -I$(HOME)/q/c -o $@ $< $(HOME)/q/c/l32/c.o -lpthread
+
